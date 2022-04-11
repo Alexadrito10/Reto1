@@ -1,0 +1,40 @@
+package co.icesi.edu.facebookapp
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import co.icesi.edu.facebookapp.databinding.FragmentPublishBinding
+
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
+/**
+ * A simple [Fragment] subclass.
+ * Use the [publish.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class publish : Fragment() {
+    private var _binding: FragmentPublishBinding? = null
+    private val binding get() = _binding!!
+    var image: String =""
+    var listener: OnNewPostListener? = null
+    val context = activity as Home
+
+
+    interface OnNewPostListener {
+        fun onNewPost(post:Post)
+    }
+
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_publish, container, false)
+    }
+
+
+}
