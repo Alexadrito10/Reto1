@@ -14,9 +14,9 @@ class Login : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var user1= User("alfa@gmail.com","","Lex" , "aplicacionesmoviles")
+        var user1= User("alfa@gmail.com","123","Lex" , "aplicacionesmoviles")
 
-        var user2= User("beta@gmail.com", "","Luthor", "aplicacionesmoviles")
+        var user2= User("beta@gmail.com", "123","Luthor", "aplicacionesmoviles")
 
 
         binding.logInBtn.setOnClickListener{
