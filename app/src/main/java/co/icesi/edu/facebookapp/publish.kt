@@ -31,9 +31,9 @@ import java.util.*
 class publish : Fragment() {
     private var _binding: FragmentPublishBinding? = null
     private val binding get() = _binding!!
-    var image: String =""
+    private var image: String =""
     var listener: OnNewPostListener? = null
-    val context = activity as Home
+
 
 
     interface OnNewPostListener {
@@ -167,17 +167,21 @@ class publish : Fragment() {
             val description = binding.caption.text.toString()
             val date = getCurrentDateTime().toString()
 
-            listener?.let {
+           // listener?.let {
                 //val post = Post()
                 // it.onNewPost(post)
 
-            }
+           // }
         }
         return binding.root
     }
     companion object {
         @JvmStatic
         fun newInstance() = publish()
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 

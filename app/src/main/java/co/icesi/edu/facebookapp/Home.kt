@@ -26,7 +26,7 @@ class Home : AppCompatActivity() {
 
         showFragment(homeFragment)
 
-        binding.bottomNavigationView.setOnItemSelectedListener { menuItem ->
+        /* binding.bottomNavigationView.setOnItemSelectedListener { menuItem ->
             if (menuItem.itemId == R.id.home) {
                 showFragment(homeFragment)
             } else if (menuItem.itemId == R.id.publish) {
@@ -35,7 +35,7 @@ class Home : AppCompatActivity() {
                 showFragment(profileFragment)
             }
             true
-        }
+        }*/
 
     }
 

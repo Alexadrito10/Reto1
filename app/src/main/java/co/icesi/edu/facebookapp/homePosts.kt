@@ -17,6 +17,7 @@ import co.icesi.edu.facebookapp.databinding.FragmentHomePostsBinding
 class homePosts : Fragment() {
     private var _binding: FragmentHomePostsBinding? = null
     private val binding get() = _binding!!
+    //private val adapter = PostAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +26,9 @@ class homePosts : Fragment() {
         _binding = FragmentHomePostsBinding.inflate(inflater, container, false)
 
         binding.recycler.layoutManager = LinearLayoutManager(requireContext())
+        //  binding.recycler.adapter = PostAdapter(PostProvider.postList)
+
+        return binding.root
 
 
         return binding.root
